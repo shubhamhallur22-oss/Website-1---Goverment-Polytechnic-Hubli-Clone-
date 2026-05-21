@@ -1,0 +1,334 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #c8dfea;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* header */
+header {
+  background-color:#779eb2;
+  min-height: 140px;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* logos */
+.govlogo {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 70px;
+}
+
+.clglogo {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 90px;
+}
+
+/* headings */
+header h1 {
+  text-align: center;
+  margin: 0;
+  padding-top: 25px;
+  padding-left: 80px;
+  padding-right: 80px;
+  font-size: clamp(20px, 4vw, 30px);
+}
+
+header h2 {
+  text-align: center;
+  margin: 0;
+  font-size: clamp(14px, 3vw, 20px);
+}
+
+/* navbar */
+.nav {
+  background: #acc8d7;
+  border-radius: 13px;
+  margin-top: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 55px;
+}
+
+/* nav links */
+nav a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: 0.3s ease;
+  border-radius: 8px;
+}
+
+nav a:hover {
+  color: white;
+  background-color: #5f889c;
+  transform: translateY(-3px);
+}
+
+/* home icon */
+.homeicon {
+  height: 22px;
+  width: 22px;
+  filter: brightness(0);
+}
+
+/* marquee */
+marquee {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* buttons */
+button {
+  background-color: #779eb2;
+  color: white;
+  margin-left: 10px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #5f889c;
+  transform: scale(1.05);
+}
+
+/* sections */
+.main,
+.course,
+.facilities,
+.principal,
+.notice,
+.placement,
+.gallery {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transition: 0.4s ease;
+  animation: fadeIn 0.8s ease;
+}
+
+.main:hover,
+.course:hover,
+.facilities:hover,
+.principal:hover,
+.notice:hover,
+.placement:hover,
+.gallery:hover {
+  transform: translateY(-5px);
+}
+
+/* headings */
+.main h2,
+.course h2,
+.facilities h2,
+.facilities h3,
+.principal h2,
+.notice h2,
+.placement h2,
+.gallery h2 {
+  color: #2c5d7c;
+}
+
+/* paragraphs */
+p {
+  line-height: 1.7;
+}
+
+/* lists */
+.course ul,
+.facilities ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.course ul li,
+.facilities ul li {
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.course ul li:hover,
+.facilities ul li:hover {
+  transform: translateX(5px);
+}
+
+/* bullets */
+.course ul li::before {
+  content: "✔ ";
+  color: green;
+  font-weight: bold;
+}
+
+.facilities ul li::before {
+  content: "➤ ";
+  color: #779eb2;
+  font-weight: bold;
+}
+
+/* gallery */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* gallery card */
+.gallery-item {
+  background: linear-gradient(to bottom, #eef7fc, #dbeef7);
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.4s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.gallery-item:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* gallery images */
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: 0.4s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.04);
+}
+
+/* image title */
+.gallery-item h4 {
+  margin-top: 12px;
+  color: #2c5d7c;
+  font-size: 18px;
+}
+
+/* footer */
+footer {
+  background: #779eb2;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* mobile responsive */
+@media (max-width: 768px) {
+
+  header {
+    min-height: 120px;
+  }
+
+  .govlogo {
+    height: 50px;
+  }
+
+  .clglogo {
+    height: 60px;
+  }
+
+  header h1 {
+    font-size: 18px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  header h2 {
+    font-size: 12px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  nav {
+    gap: 5px;
+    padding: 5px;
+  }
+
+  nav a {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .main,
+  .course,
+  .facilities,
+  .principal,
+  .notice,
+  .placement,
+  .gallery {
+    margin: 12px;
+    padding: 15px;
+  }
+
+  /* gallery mobile */
+  .gallery-container {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item img {
+    height: 220px;
+  }
+
+  /* footer mobile */
+  footer {
+    font-size: 13px;
+    padding: 15px;
+  }
+
+  marquee {
+    font-size: 14px;
+  }
+}

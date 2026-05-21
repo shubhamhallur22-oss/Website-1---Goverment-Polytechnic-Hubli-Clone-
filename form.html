@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Application Form</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+  <h1>Online Application Form</h1>
+</header>
+
+<!-- BACK BUTTON -->
+
+<div class="back-btn">
+  <button onclick="history.back()">Back</button>
+</div>
+
+<!-- FORM -->
+
+<form action="submit.php" method="POST" enctype="multipart/form-data">
+
+  <ol>
+
+    <!-- PERSONAL DETAILS -->
+
+    <li><h2>Personal Details</h2></li>
+
+    <ul>
+
+      <li>
+        <label>Full Name:</label>
+        <input type="text" name="username"
+        placeholder="Enter your full name"
+        pattern="^[a-zA-Z ]+$" required>
+      </li>
+
+      <li>
+        <label>Father Name:</label>
+        <input type="text" name="father"
+        placeholder="Enter father name"
+        pattern="^[a-zA-Z ]+$" required>
+      </li>
+
+      <li>
+        <label>Mother Name:</label>
+        <input type="text" name="mother"
+        placeholder="Enter mother name"
+        pattern="^[a-zA-Z ]+$" required>
+      </li>
+
+      <li>
+        <label>Date of Birth:</label>
+        <input type="date" name="dob" required>
+      </li>
+
+      <li>
+        <label>Gender:</label><br>
+
+        <input type="radio" name="gender"
+        value="male" required> Male
+
+        <input type="radio" name="gender"
+        value="female"> Female
+
+        <input type="radio" name="gender"
+        value="other"> Other
+      </li>
+
+      <li>
+        <label>Religion:</label>
+
+        <select name="religion" required>
+
+          <option value="">Select</option>
+
+          <option>Hindu</option>
+
+          <option>Muslim</option>
+
+          <option>Christian</option>
+
+          <option>Sikh</option>
+
+          <option>Others</option>
+
+        </select>
+      </li>
+
+      <li>
+        <label>Category:</label>
+
+        <select name="category" required>
+
+          <option value="">Select</option>
+
+          <option>General</option>
+
+          <option>OBC</option>
+
+          <option>SC</option>
+
+          <option>ST</option>
+
+        </select>
+      </li>
+
+      <li>
+        <label>Aadhar Number:</label>
+
+        <input type="text" name="aadhar"
+
+        placeholder="12-digit Aadhar Number"
+
+        pattern="^[0-9]{12}$"
+
+        maxlength="12" required>
+      </li>
+
+    </ul>
+
+    <!-- CONTACT DETAILS -->
+
+    <li><h2>Contact Details</h2></li>
+
+    <ul>
+
+      <li>
+        <label>Phone Number:</label>
+
+        <input type="tel" name="phone"
+
+        placeholder="10-digit mobile number"
+
+        pattern="^[0-9]{10}$"
+
+        required>
+      </li>
+
+      <li>
+        <label>Email Address:</label>
+
+        <input type="email" name="email"
+
+        placeholder="Enter your email"
+
+        required>
+      </li>
+
+      <li>
+        <label>Address:</label>
+
+        <textarea name="address"
+
+        rows="4"
+
+        placeholder="Enter your address"
+
+        required></textarea>
+      </li>
+
+    </ul>
+
+    <!-- EDUCATION -->
+
+    <li><h2>Educational Qualification</h2></li>
+
+    <ul>
+
+      <li>
+        <label>Applying Basis:</label>
+
+        <select name="basis" required>
+
+          <option value="">Select</option>
+
+          <option>SSLC</option>
+
+          <option>PUC</option>
+
+          <option>ITI</option>
+
+        </select>
+      </li>
+
+      <li>
+
+        <input type="checkbox"
+
+        name="sslc_passed"
+
+        value="yes">
+
+        I have passed SSLC
+
+      </li>
+
+      <li>
+        <label>School Name:</label>
+
+        <input type="text" name="school"
+
+        placeholder="Enter school name"
+
+        required>
+      </li>
+
+      <li>
+        <label>Board:</label>
+
+        <select name="board" required>
+
+          <option value="">Select</option>
+
+          <option>SSLC</option>
+
+          <option>CBSE</option>
+
+          <option>ICSE</option>
+
+        </select>
+      </li>
+
+      <li>
+        <label>Year of Passing:</label>
+
+        <input type="month" name="year" required>
+      </li>
+
+      <li>
+        <label>Total Marks:</label>
+
+        <input type="number" name="total_marks"
+
+        placeholder="Out of 625"
+
+        required>
+      </li>
+
+      <li>
+        <label>Obtained Marks:</label>
+
+        <input type="number" name="obtained_marks"
+
+        placeholder="Enter obtained marks"
+
+        required>
+      </li>
+
+      <li>
+        <label>Percentage:</label>
+
+        <input type="number" name="percentage"
+
+        placeholder="Enter percentage"
+
+        min="0"
+
+        max="100"
+
+        step="0.01"
+
+        required>
+      </li>
+
+    </ul>
+
+    <!-- COURSE -->
+
+    <li><h2>Course Selection</h2></li>
+
+    <ul>
+
+      <li>
+
+        <label>Select Branch:</label>
+
+        <select name="branch" required>
+
+          <option value="">Select</option>
+
+          <option>Civil Engineering</option>
+
+          <option>Computer Science Engineering</option>
+
+          <option>Electronics & Communication</option>
+
+          <option>Mechanical Engineering</option>
+
+        </select>
+
+      </li>
+
+    </ul>
+
+    <!-- DOCUMENTS -->
+
+    <li><h2>Document Upload</h2></li>
+
+    <ul>
+
+      <li>
+        <label>Student Photo:</label>
+
+        <input type="file"
+
+        name="photo"
+
+        accept="image/jpeg, image/png"
+
+        required>
+      </li>
+
+      <li>
+        <label>Student Signature:</label>
+
+        <input type="file"
+
+        name="signature"
+
+        accept="image/jpeg, image/png"
+
+        required>
+      </li>
+
+      <li>
+        <label>Marks Card:</label>
+
+        <input type="file"
+
+        name="marks_card"
+
+        required>
+      </li>
+
+      <li>
+        <label>Income Certificate:</label>
+
+        <input type="file"
+
+        name="income_certificate"
+
+        required>
+      </li>
+
+      <li>
+        <label>Caste Certificate:</label>
+
+        <input type="file"
+
+        name="caste_certificate"
+
+        required>
+      </li>
+
+    </ul>
+
+    <!-- ADDITIONAL -->
+
+    <li><h2>Additional Details</h2></li>
+
+    <ul>
+
+      <li>
+        <label>Achievements:</label>
+
+        <input type="file" name="achievement">
+      </li>
+
+      <li>
+
+        <label>Physically Handicapped:</label><br>
+
+        <input type="radio" name="ph" value="yes"> Yes
+
+        <input type="radio" name="ph" value="no"> No
+
+      </li>
+
+      <li>
+        <label>Medical Certificate:</label>
+
+        <input type="file" name="medical_certificate">
+      </li>
+
+    </ul>
+
+    <!-- DECLARATION -->
+
+    <li><h2>Declaration</h2></li>
+
+    <div class="declaration">
+
+      <input type="checkbox"
+
+      name="declare"
+
+      required>
+
+      I hereby declare that all the information provided above is true and correct to the best of my knowledge.
+
+    </div>
+
+    <!-- BUTTONS -->
+
+    <div class="button-group">
+
+      <button type="reset" class="reset-btn">
+        Reset
+      </button>
+
+      <button type="submit" class="submit-btn">
+        Submit
+      </button>
+
+    </div>
+
+  </ol>
+
+</form>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <p>
+    <b><u>Disclaimer:</u></b>
+    This website is a student-created duplicate project inspired by the official Government Polytechnic Hubli website and is intended only for educational purposes.
+  </p>
+
+  <p>
+    © 2026 Government Polytechnic Hubli. All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

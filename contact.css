@@ -1,0 +1,463 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* BODY */
+body {
+  background: linear-gradient(to bottom, #c8dfea, #dff1f8);
+
+  font-family: 'Times New Roman', Times, serif;
+
+  margin: 0;
+
+  overflow-x: hidden;
+
+  animation: bodyFade 1s ease;
+}
+
+/* BODY ANIMATION */
+@keyframes bodyFade {
+
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* HEADER */
+header {
+
+  background-color: #779eb2;
+  min-height: 145px;
+
+  border-radius: 0 0 18px 18px;
+
+  position: relative;
+
+  padding: 10px;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.18);
+}
+
+/* LEFT LOGO */
+.govlogo {
+
+  position: absolute;
+
+  left: 15px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  height: 70px;
+}
+
+/* RIGHT LOGO */
+.clglogo {
+
+  position: absolute;
+
+  right: 15px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  height: 80px;
+}
+
+/* HEADER TITLE */
+header h1 {
+
+  text-align: center;
+
+  margin: 0;
+
+  padding-top: 28px;
+
+  padding-left: 90px;
+  padding-right: 90px;
+
+  font-size: clamp(20px, 4vw, 30px);
+
+  color: #0d2c3e;
+
+  letter-spacing: 1px;
+}
+
+/* SUBTITLE */
+header h2 {
+
+  text-align: center;
+
+  margin-top: 6px;
+
+  font-size: clamp(13px, 2vw, 20px);
+
+  color: #173f55;
+}
+
+/* PAGE HEADING */
+.heading {
+
+  background:  #acc8d7;
+
+
+  border-radius: 14px;
+
+  margin: 12px;
+
+  min-height: 55px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 100;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.heading h1 {
+
+  margin: 0;
+
+  color: #184761;
+}
+
+/* BUTTON */
+button {
+
+  background: linear-gradient(135deg, #779eb2, #5f889c);
+
+  color: white;
+
+  border: none;
+
+  border-radius: 10px;
+
+  width: 90px;
+
+  height: 42px;
+
+  margin: 15px;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+button:hover {
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+
+button:active {
+
+  transform: scale(0.96);
+}
+
+/* CONTACT CARD */
+.cd {
+
+  background: rgba(255,255,255,0.75);
+
+  backdrop-filter: blur(10px);
+
+  margin: 20px;
+
+  padding: 25px;
+
+  border-radius: 18px;
+
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+
+  transition: 0.4s;
+
+  animation: cardFade 1s ease;
+}
+
+/* CARD ANIMATION */
+@keyframes cardFade {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(25px);
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+.cd:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow: 0 12px 28px rgba(0,0,0,0.16);
+}
+
+/* CARD HEADING */
+.cd h2 {
+
+  color: #2c5d7c;
+
+  border-left: 5px solid #779eb2;
+
+  padding-left: 12px;
+
+  margin-top: 0;
+}
+
+/* LIST */
+.cd ul {
+
+  list-style: none;
+
+  padding-left: 0;
+}
+
+.cd ul li {
+
+  margin-bottom: 18px;
+
+  line-height: 1.8;
+
+  font-size: 17px;
+
+  transition: 0.3s;
+}
+
+/* CUSTOM BULLETS */
+.cd ul li::before {
+
+  content: "➤ ";
+
+  color: #779eb2;
+
+  font-weight: bold;
+}
+
+/* LIST HOVER */
+.cd ul li:hover {
+
+  transform: translateX(6px);
+
+  color: #17445c;
+}
+
+/* LINKS */
+.cd a {
+
+  text-decoration: none;
+
+  color: #205673;
+
+  font-weight: bold;
+}
+
+.cd a:hover {
+
+  text-decoration: underline;
+}
+
+/* CONTACT BUTTONS */
+.contact-buttons {
+
+  display: flex;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+
+  margin-top: 25px;
+}
+
+.contact-buttons a {
+
+  background: linear-gradient(135deg, #779eb2, #5f889c);
+
+  color: white;
+
+  text-decoration: none;
+
+  padding: 12px 18px;
+
+  border-radius: 10px;
+
+  transition: 0.3s;
+
+  font-weight: bold;
+}
+
+.contact-buttons a:hover {
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+
+/* MAP */
+.map {
+
+  background: rgba(255,255,255,0.75);
+
+  backdrop-filter: blur(10px);
+
+  margin: 20px;
+
+  padding: 20px;
+
+  border-radius: 18px;
+
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+
+  transition: 0.4s;
+}
+
+.map:hover {
+
+  transform: translateY(-5px);
+}
+
+.map h2 {
+
+  color: #2c5d7c;
+
+  border-left: 5px solid #779eb2;
+
+  padding-left: 12px;
+}
+
+/* MAP FRAME */
+.map iframe {
+
+  width: 100%;
+
+  height: 320px;
+
+  border: 0;
+
+  border-radius: 14px;
+}
+
+/* FOOTER */
+footer {
+
+  background: linear-gradient(135deg, #acc8d7, #bdd8e5);
+
+  text-align: center;
+
+  padding: 22px;
+
+  margin-top: 30px;
+
+  border-radius: 18px 18px 0 0;
+
+  color: #16394b;
+
+  line-height: 1.7;
+}
+
+footer p {
+
+  margin: 8px 0;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  header {
+
+    min-height: 115px;
+  }
+
+  .govlogo {
+
+    height: 50px;
+  }
+
+  .clglogo {
+
+    height: 58px;
+  }
+
+  header h1 {
+
+    font-size: 18px;
+
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  header h2 {
+
+    font-size: 12px;
+
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .heading h1 {
+
+    font-size: 24px;
+  }
+
+  .cd,
+  .map {
+
+    margin: 12px;
+
+    padding: 18px;
+  }
+
+  .cd ul li {
+
+    font-size: 15px;
+  }
+
+  .contact-buttons {
+
+    flex-direction: column;
+  }
+
+  .contact-buttons a {
+
+    text-align: center;
+  }
+
+  .map iframe {
+
+    height: 230px;
+  }
+
+  footer {
+
+    font-size: 13px;
+  }
+}

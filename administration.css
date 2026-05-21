@@ -1,0 +1,308 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #c8dfea;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+
+  animation: fadeBody 1s ease;
+}
+
+/* body animation */
+@keyframes fadeBody {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* header */
+header {
+  background: #779eb2;
+  min-height: 140px;
+  border-radius: 12px;
+  position: relative;
+}
+
+/* left logo */
+.govlogo {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 70px;
+  width: auto;
+}
+
+/* right logo */
+.clglogo {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 90px;
+  width: auto;
+}
+
+/* headings */
+header h1 {
+  text-align: center;
+  margin: 0;
+  padding-top: 25px;
+  padding-left: 80px;
+  padding-right: 80px;
+
+  font-size: clamp(20px, 4vw, 30px);
+}
+
+header h2 {
+  text-align: center;
+  margin: 0;
+
+  font-size: clamp(14px, 3vw, 20px);
+}
+
+/* page heading */
+.heading {
+  background: #acc8d7;
+
+  border-radius: 13px;
+
+  margin-top: 10px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  min-height: 50px;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 100;
+}
+
+.heading h1 {
+  margin: 0;
+
+  color: #2c5d7c;
+}
+
+/* button */
+button {
+  background: #779eb2;
+  color: white;
+  border-radius: 10px;
+
+  height: 40px;
+
+  width: 80px;
+
+  border: none;
+
+  margin: 15px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  font-weight: bold;
+}
+
+/* button hover */
+button:hover {
+  background: #5f889c;
+
+  transform: scale(1.05);
+}
+
+/* cards */
+.intro,
+.adminis,
+.principal,
+.office,
+.committee,
+.objective,
+.facilities {
+
+  margin: 20px;
+
+  padding: 22px;
+
+  border-radius: 14px;
+
+  background: white;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+  transition: 0.3s;
+
+  animation: slideUp 0.8s ease;
+}
+
+/* card animation */
+@keyframes slideUp {
+
+  from {
+    transform: translateY(30px);
+
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+
+    opacity: 1;
+  }
+}
+
+/* card hover */
+.intro:hover,
+.adminis:hover,
+.principal:hover,
+.office:hover,
+.committee:hover,
+.objective:hover,
+.facilities:hover {
+
+  transform: translateY(-5px);
+}
+
+/* headings */
+.intro h2,
+.adminis h2,
+.principal h2,
+.office h2,
+.committee h2,
+.objective h2,
+.facilities h2 {
+
+  color: #2c5d7c;
+  
+  margin-top: 0;
+}
+
+/* paragraph */
+p {
+  line-height: 1.8;
+
+  text-align: justify;
+}
+
+/* lists */
+ul {
+  list-style: none;
+
+  padding-left: 0;
+}
+
+/* list items */
+ul li {
+  margin-bottom: 12px;
+
+  line-height: 1.7;
+
+  transition: 0.3s;
+}
+
+/* bullets */
+ul li::before {
+  content: "➤ ";
+
+  color: #779eb2;
+
+  font-weight: bold;
+}
+
+/* list hover */
+ul li:hover {
+  transform: translateX(5px);
+}
+
+/* footer */
+footer {
+
+  text-align: center;
+
+  padding: 20px;
+
+  margin-top: 20px;
+
+  background: #acc8d7;
+
+  border-radius: 12px 12px 0 0;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+/* mobile responsive */
+@media (max-width: 768px) {
+
+  header {
+    min-height: 115px;
+  }
+
+  .govlogo {
+    height: 50px;
+  }
+
+  .clglogo {
+    height: 60px;
+  }
+
+  header h1 {
+    font-size: 18px;
+
+    padding-left: 60px;
+
+    padding-right: 60px;
+  }
+
+  header h2 {
+    font-size: 12px;
+
+    padding-left: 50px;
+
+    padding-right: 50px;
+  }
+
+  .intro,
+  .adminis,
+  .principal,
+  .office,
+  .committee,
+  .objective,
+  .facilities {
+
+    margin: 12px;
+
+    padding: 16px;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  footer {
+
+    font-size: 13px;
+
+    padding: 15px;
+  }
+
+}
